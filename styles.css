@@ -252,24 +252,27 @@ deliver-text p {
 
     header .navbar {
         position: absolute;
-        top: -500px;
+        /* Assim fica abaixo do menu, senao podemos abrir no topo do menu mudando pra 0 */
+        top: 100%; 
         left: 0;
         right: 0;
-        display: flex;
+        display: none; 
         flex-direction: column;
         background-color: #fff;
-        box-shadow: 0 4px 4px rgb(14 55 54/14%);
+        box-shadow: 0 4px 4px rgba(14, 55, 54, 0.14);
+        /* caso queira remover a "linha" borda superior */
         border-top: 2px solid var(--main-color);
         transition: 0.2s;
         text-align: left;
     }
-
-    .navbar .active {
-        top: 100%;
+    /* Menu aparece quando recebe a classe "active" */
+    header .navbar.active {
+        display: flex; 
     }
-
-    .navbar a {
-        padding: 1.5rem;
+    
+    
+    header .navbar a {
+        padding: 0.5rem;
         display: block;
         color: var(--second-color);
     }
