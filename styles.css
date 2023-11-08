@@ -147,28 +147,30 @@ deliver-text p {
     text-align: justify;
 }
 .card-container {
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 40px 20px;
     align-items: center;
     justify-content: center; 
 
     > figure {
-        width: 180px;
+        width: 200px;
+        height: 200px;
         border-radius: 1rem;
         overflow: hidden;
         cursor: pointer;
-
-        
     }
       figure > * {
         grid-area: 1/1;
         transition: .4s;
     }
     figure figcaption {
-        margin-top: 11px;
+        position:relative;
+        bottom:49px;
         display: flex;
         align-items: center;
+        justify-content: center;
         font-family: sans-serif;
         font-size: 1rem;
         font-weight: bold;
@@ -198,6 +200,7 @@ deliver-text p {
     
 }
 .container-episodes {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     position: relative;
@@ -219,7 +222,27 @@ deliver-text p {
     height: 100%;
 }
 
-@media (max-width: 768px ) {
+.footer{
+    background:var(--second-color);
+    padding:15px 0px;
+    text-align:center;
+
+    .social-icon {
+        margin: 0 10px; /* Adicione margens direita e esquerda para afastar os ícones */
+        color: #ffffff;
+    }
+
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:var(--main-color);
+    font-size:0.8em;
+    }
+
+@media (max-width: 840px ) {
     header {
         padding: 11px 4%;
     }
@@ -267,5 +290,8 @@ deliver-text p {
     .home-text h2 {
         font-size: 1.2rem;
     }
-} 
 
+    figure figcaption {
+        --_i: 0%;
+    }
+} 
