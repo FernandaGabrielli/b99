@@ -245,6 +245,7 @@ deliver-text p {
 @media (max-width: 840px ) {
     header {
         padding: 11px 4%;
+        margin-bottom: 20px; 
     }
     #menu-icon {
         display: initial;
