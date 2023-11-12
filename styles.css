@@ -242,16 +242,21 @@ deliver-text p {
     font-size:0.8em;
     }
 
-@media (max-width: 840px ) {
+
+    @media screen and (max-width: 768px) { /* ajuste para dispositivos com largura até 768px */
+        
+    .home-text {
+        margin-top: 40px; /* ajuste o valor conforme necessário */
+    }
     header {
         padding: 11px 4%;
-        margin-bottom: 20px; 
     }
     #menu-icon {
         display: initial;
     }
 
     header .navbar {
+        
         position: absolute;
         /* Assim fica abaixo do menu, senao podemos abrir no topo do menu mudando pra 0 */
         top: 100%; 
@@ -279,6 +284,7 @@ deliver-text p {
     }
 
     .home {
+        
             width: 100%;
             min-height: 50vh;
     }
